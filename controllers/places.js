@@ -3,7 +3,7 @@ const { Router } = require('express')
 const router = require('express').Router()
 
 // More code here in a moment
-Router.length('/', () =>{
+router.get('/', (req, res) =>{
     res.send('GET/ places')
 })
 
