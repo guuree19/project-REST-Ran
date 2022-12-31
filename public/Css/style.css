@@ -1,0 +1,12 @@
+h1 ,p{
+    text-align: center;
+    color: cornflowerblue;
+}
+img{
+    height: 250px;
+    width: 200px;
+    position: relative;
+    left: 280px;
+    bottom: 25px;
+}
+  
