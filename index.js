@@ -9,6 +9,7 @@ const app = express()
 // defined the view engine (JSX in this case) 
 app.set("view engine", "jsx");
 app.engine("jsx", require("express-react-views").createEngine());
+app.use(express.static('public'))
 
 app.use('/places', require('./controllers/places'))
 // Create a homepage route.

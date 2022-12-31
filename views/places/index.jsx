@@ -13,11 +13,11 @@ function index (data) {
     return (
       <Def>
         <main>
-        <h1>PLACES INDEX PAGE</h1>
-        {placesFormatted}
+            <h1>PLACES INDEX PAGE</h1>
+            {placesFormatted}
         </main>
       </Def>
-  )
+    )
   
 }  
 module.exports = index
