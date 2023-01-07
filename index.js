@@ -1,10 +1,10 @@
 
-require('dotenv').config() 
 // Require needed modules.
 const express = require('express')
 
 // Initialize the app object.
 const app = express()
+require('dotenv').config() 
 
 // defined the view engine (JSX in this case) 
 app.set("view engine", "jsx");
