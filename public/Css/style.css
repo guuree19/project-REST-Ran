@@ -1,4 +1,4 @@
-h1 ,p{
+h1 {
     text-align: center;
     color: cornflowerblue;
 }
@@ -9,4 +9,11 @@ img{
     left: 280px;
     bottom: 25px;
 }
+/* .form-group{
+    background-color: rgb(243, 234, 234);
+    font-size: larger;
+    color: black;
+    height: 60px;
+    text-align:justify;
+} */
   
