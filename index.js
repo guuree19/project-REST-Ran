@@ -5,6 +5,8 @@ const express = require('express')
 // Initialize the app object.
 const app = express()
 require('dotenv').config() 
+const bodyParser = require('body-parser');
+
 
 // defined the view engine (JSX in this case) 
 app.set("view engine", "jsx");
