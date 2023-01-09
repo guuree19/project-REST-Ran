@@ -22,15 +22,14 @@ function index (data) {
   })
   
   return (
-      <Def>
-        <main>
-            <h1>PLACES INDEX PAGE</h1>
-            <div className='row'> 
-                {placesFormatted}
-            </div>
-        </main>
-      </Def>
-    )
-  
+    <Def>
+      <main>
+        <h1>PLACES INDEX PAGE</h1>
+        <div className='row'> 
+          {placesFormatted}
+        </div>
+      </main>
+    </Def>
+  )
 }  
 module.exports = index
