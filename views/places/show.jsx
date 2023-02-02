@@ -6,36 +6,82 @@ function show (data) {
   return (
     <Def>
       <main>
-        <div className='row'>
-            <div className="col-sm-6">  
-              <img src={data.place.pic} alt={data.place.name} /> 
-              <h3>
-                Located In {data.place.city}, {data.place.state}
-              </h3>
-           </div>
-           <div className='col-sm-6'>
-            <h2>
-              Description 
-            </h2>
-            <h3>
-              {data.place.showEstablished()}
-            </h3>
-            <h4>
-              Serving {data.place.cuisines}
-            </h4>
-            <a href={`/places/${data.id}/edit`} className="btn btn-warning"> 
-              Edit
-            </a> 
-            <form method="POST" action={`/places/${data.id}?_method=DELETE`}> 
-            <button type="submit" className="btn btn-danger">
-              Delete
-            </button>
-            </form>
-          </div> 
-        </div>
+        <h1>Edit Places</h1>
+        <form method="POST" action={`/places/${data.place.id}?_method=PUT`}>
+          <div className="row">
+            <div className="form-group col-sm-6">
+              <label htmlFor="name">Place Name</label>
+              <input
+                className="form-control"
+                type="text"
+                id="name"
+                name="name"
+                value={data.place.name}
+                required
+              ></input>
+            </div>
+
+            <div className="form-group col-sm-6">
+              <label htmlFor="pic">Place Picture</label>
+              <input
+                className="form-control"
+                id="pic"
+                name="pic"
+                type="text"
+                value={data.place.pic}
+              ></input>
+            </div>
+
+            <div className="form-group col-sm-6">
+              <label htmlFor="city">City</label>
+              <input
+                className="form-control"
+                id="city"
+                name="city"
+                type="text"
+                value={data.place.city}
+              ></input>
+            </div>
+            <div className="form-group col-sm-6">
+              <label htmlFor="state">State</label>
+              <input
+                className="form-control"
+                id="state"
+                name="state"
+                type="text"
+                value={data.place.state}
+              ></input>
+            </div>
+          </div>
+          <div className="form-group">
+            <label htmlFor="cuisines">Cuisines</label>
+            <input
+              className="form-control"
+              id="cuisines"
+              name="cuisines"
+              type="text"
+              value={data.place.cuisines}
+              required
+            ></input>
+          </div>
+          <div className="form-group">
+            <label htmlFor="founded">Founded</label>
+            <input
+              className="form-control"
+              id="founded"
+              name="founded"
+              value={data.place.founded}
+            ></input>
+          </div>
+          <input
+            className="btn btn-primary"
+            type="submit"
+            value="Submit Changes"
+          ></input>
+        </form>
       </main>
     </Def>
-  )
+  );
 }
 
 module.exports = show

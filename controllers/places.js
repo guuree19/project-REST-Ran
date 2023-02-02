@@ -38,7 +38,7 @@ router.post('/', (req, res) => {
  
       }
 
-//find all validation errors
+ //find all validation errors
       res.render('places/new', {message})
 
     }
@@ -77,8 +77,18 @@ router.delete('/:id', (req, res) => {
 })
 
 router.get('/:id/edit', (req, res) => {
-  res.send('GET edit form stub')
+  let id = Number(req.params.id)
+  if (isNaN(id)) {
+      res.render('error404')
+  }
+  else if (!places[id]) {
+      res.render('error404')
+  }
+  else {
+    res.render('places/edit', { place: places[id] })
+  }
 })
+
 
 router.post('/:id/rant', (req, res) => {
   res.send('GET /places/:id/rant stub')
