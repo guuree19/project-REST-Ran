@@ -9,9 +9,7 @@ function new_form (data) {
       <h4 className='alert-danger'>
         {data.message}
       </h4>
-
     )
-
   }
     return (
         <Def>

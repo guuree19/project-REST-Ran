@@ -6,7 +6,7 @@ function home(){
     return (
         <Def>
             <main>
-                <h1>HOME</h1>
+                <h1>RESTRANTS</h1>
                 <div>
                     <img src="/images/Rest-R.jpg" alt='summer baloons' />      
                     Photo by <a href="AUTHOR_LINK">Ian Dooley</a> on <a href="UNSPLASH_LINK">Unsplash</a>
