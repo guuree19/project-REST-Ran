@@ -16,11 +16,6 @@ router.get('/', (req, res) => {
 })
 // Post Route
 router.post('/', (req, res) => {
-  if (!req.body.pic) {
-    // Default image if one is not provided
-    req.body.pic = 'http://placekitten.com/400/400'
-  }
-
   db.Place.create(req.body)
     .then(() => {
       res.redirect('/places')
@@ -32,6 +27,7 @@ router.post('/', (req, res) => {
           message += `${field} was ${err.errors[field].value}.` 
           message += ` ${err.errors[field].message}.`  
         }
+        // console.log('validation reeor messages ', message)
         res.render('places/new', { message })
       } else {
         res.render('error404')
